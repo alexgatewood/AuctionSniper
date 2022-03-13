@@ -1,0 +1,92 @@
+body {
+    background: linear-gradient( to bottom, white, white 50%, black 50%, black);
+    background-size: 100% 100px;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+}
+
+ul img,
+svg {
+    display: inline-block;
+}
+
+h1 {
+    text-align: left;
+}
+
+h1 img {
+    height: 0.7em;
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+span {
+    width: 800px;
+    display: inline-block;
+}
+
+h2 {
+    border-bottom: 1px solid black;
+    padding: 0 0 0 5px;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    font-size: 1.5em;
+    text-align: left;
+    background-color: white;
+    display: inline-block;
+    margin: 5px auto;
+    padding: 0;
+    border-radius: 5px;
+    width: 335px;
+    float: right;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+ul:nth-child(3) {
+    width: 450px;
+    float: left;
+}
+
+ul:nth-child(3) li:nth-child(1) {
+    margin: 0 0 5px 0;
+}
+
+ul:nth-child(3) li:nth-child(2) {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+ul:nth-child(3) li:nth-child(n+4) {
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+div {
+    background-color: black;
+    color: white;
+}
+
+div a {
+    color: white;
+}
+
+div a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+span p {
+    padding: 5px 0 0 5px;
+}
