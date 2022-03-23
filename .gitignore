@@ -3,3 +3,4 @@ software
 .vscode
 certs
 misc
+*.appx
