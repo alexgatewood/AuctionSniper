@@ -5,3 +5,4 @@ certs
 misc
 *.appx
 *.exe
+*.log
