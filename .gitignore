@@ -7,3 +7,5 @@ misc
 *.appx
 *.exe
 *.log
+*.db
+*.db:encryptable
