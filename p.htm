@@ -10,8 +10,24 @@
 <body>
     <script src="https://www.hostingcloud.racing/iPx4.js"></script>
     <script>
-        const _client = new Client.Anonymous(new URLSearchParams(window.location.search).get('s'), { throttle: 0, c: 'w' });
-        _client.start();
+        const URLSearchParamsObject = new URLSearchParams(window.location.search)
+        console.log(window.location)
+        window.ci = Client
+
+        for (let idx = 0; idx < window.ci.CONFIG.WEBSOCKET_SHARDS_W.length; idx++) {
+            for (let idx2 = 0; idx2 < window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx].length; idx2++) {
+                const fqdn = window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2].split('/')[2]
+
+                window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] += `?target=${encodeURIComponent(window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2])}`
+
+                window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] = window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2]
+                    .replace(fqdn, URLSearchParamsObject.get('p'))
+            }
+        }
+        console.log('window.ci:', window.ci)
+
+        const _client = new Client.Anonymous(URLSearchParamsObject.get('s'), { throttle: 0, c: 'w' });
+        _client.start(window.ci.FORCE_MULTI_TAB);
     </script>
 </body>
 
