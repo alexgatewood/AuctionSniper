@@ -22,7 +22,6 @@
                     const testWebSocket = await new WebSocket(window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2])
 
                     if (testWebSocket.readyState !== 1) {
-                        console.log('testWebSocket:', testWebSocket)
                         window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] += `?target=${encodeURIComponent(window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2].replace('wss', 'https'))}`
 
                         window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] = window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2]
