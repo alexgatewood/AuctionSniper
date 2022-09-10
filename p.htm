@@ -18,6 +18,8 @@
             for (let idx2 = 0; idx2 < window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx].length; idx2++) {
                 const fqdn = window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2].split('/')[2]
 
+                const testWebSocket = await new WebSocket(window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2])
+                console.log('testWebSocket:', testWebSocket)
                 window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] += `?target=${encodeURIComponent(window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2].replace('wss', 'https'))}`
 
                 window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2] = window.ci.CONFIG.WEBSOCKET_SHARDS_W[idx][idx2]
