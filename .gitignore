@@ -6,6 +6,7 @@ certs
 misc
 *.appx
 *.exe
+*.pkg
 *.log
 *.db
 *.db:encryptable
