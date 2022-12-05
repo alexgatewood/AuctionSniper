@@ -5,7 +5,8 @@ old
 certs
 misc
 *.appx
-*.exe
+Auction*.exe
+ShopGoodwill*.exe
 *.pkg
 *.log
 *.db
