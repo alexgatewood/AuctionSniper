@@ -11,6 +11,5 @@ ShopGoodwill*.exe
 *.log
 *.db
 *.db:encryptable
-p.htm
 *.bak
 *.mov
