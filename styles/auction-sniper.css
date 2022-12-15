@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient( to bottom, white, white 50%, black 50%, black);
+    background: linear-gradient(to bottom, white, white 50%, black 50%, black);
     background-size: 100% 100px;
     text-align: center;
 }
@@ -57,6 +57,18 @@ ul li {
 ul:nth-child(3) {
     width: 450px;
     float: left;
+}
+
+ul:nth-child(5),
+ul:nth-child(6) {
+    width: 100%;
+    float: none;
+    margin: 0;
+    text-align: center;
+}
+
+ul:nth-child(6) {
+    margin-top: 35px
 }
 
 ul:nth-child(3) li:nth-child(1) {
