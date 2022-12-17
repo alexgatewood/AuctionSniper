@@ -98,6 +98,11 @@ ul:nth-child(3) li:nth-child(n+4) {
     padding: 0 0 0 5px;
 }
 
+ul>li>span {
+    width: 50%;
+    float: left;
+}
+
 div {
     background-color: black;
     color: white;
