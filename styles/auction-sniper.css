@@ -60,16 +60,29 @@ ul:nth-child(3) {
 }
 
 ul:nth-child(5),
-ul:nth-child(6) {
+ul:nth-child(6),
+ul:nth-child(7),
+ul:nth-child(8) {
     width: 100%;
     float: none;
     margin: 0;
     text-align: center;
 }
 
-ul:nth-child(6) {
+ul:nth-child(6),
+ul:nth-child(7),
+ul:nth-child(8) {
+    margin-top: 5px
+}
+
+ul:nth-child(7) {
+    margin-top: 17.5px
+}
+
+ul:nth-child(8) {
     margin-top: 35px
 }
+
 
 ul:nth-child(3) li:nth-child(1) {
     margin: 0 0 5px 0;
@@ -101,4 +114,14 @@ div a:hover {
 
 span p {
     padding: 5px 0 0 5px;
+}
+
+a,
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
